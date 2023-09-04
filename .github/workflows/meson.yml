@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: install libraries
         run: sudo apt-get install libjson-c-dev libhugetlbfs-dev
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/setup-python@v4
         with:
           python-version: '3.x'
@@ -45,7 +45,7 @@ jobs:
         run: sudo apt install gcc-arm-linux-gnueabihf pkg-config
       - name: install libraries
         run: sudo apt install uuid-dev:armhf libjson-c-dev:armhf
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: BSFishy/meson-build@v1.0.3
         with:
           # suppress python for now; the python headers currently assume native
@@ -75,7 +75,7 @@ jobs:
         run: sudo apt install gcc-powerpc64le-linux-gnu pkg-config
       - name: install libraries
         run: sudo apt install uuid-dev:ppc64el libjson-c-dev:ppc64el
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: BSFishy/meson-build@v1.0.3
         with:
           # suppress python for now; the python headers currently assume native
@@ -93,7 +93,7 @@ jobs:
     steps:
       - name: install libraries
         run: sudo apt-get install -y libpam-dev libcap-ng-dev
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/setup-python@v4
         with:
           python-version: '3.x'
@@ -109,7 +109,7 @@ jobs:
     steps:
       - name: install libraries
         run: sudo apt-get install -y libpam-dev libcap-ng-dev
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/setup-python@v4
         with:
           python-version: '3.x'
